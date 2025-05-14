@@ -1,0 +1,11 @@
+version: "3.8"
+
+services:
+  bot:
+    build: .
+    container_name: telegram_fitness_bot
+    restart: unless-stopped
+    environment:
+      - BOT_TOKEN=вставь_токен_сюда
+    volumes:
+      - ./data:/app/data
